@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import { CreditCard } from 'src/app/creditcard.type';
+import { CreditCardServiceService } from '../credit-card-service.service';
 @Component({
   selector: 'app-credit-card-list-component',
   templateUrl: './credit-card-list-component.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditCardListComponentComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  creditcards$: Observable<CreditCard[]> | null = null; 
+  
+  constructor(private CreditCardService: CreditCardServiceService) {
+    this.creditcards$ = this.CreditCardService.getCreditCards()
   }
+
+  ngOnInit(): void {}
 
 }

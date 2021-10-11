@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    padding: 10px;
+    display: block;
+}
+.info {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,1 +1,4 @@
-<p>credit-card-list-component works!</p>
+<div class="container">
+    <h1>List of creditcards</h1>
+    <app-credit-card-list-item-component *ngFor="let creditcard of creditcards$ | async" [creditcard]="creditcard"></app-credit-card-list-item-component>
+</div>

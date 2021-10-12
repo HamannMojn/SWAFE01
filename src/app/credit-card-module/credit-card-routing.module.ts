@@ -10,7 +10,7 @@ const routes: Routes = [
         component: CreditCardListComponentComponent
     },
     {
-        path: 'add',
+        path: 'card/add',
         component: CreditCardAddComponentComponent
     },
     {

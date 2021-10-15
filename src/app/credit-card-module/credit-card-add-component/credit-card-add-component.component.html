@@ -1,1 +1,68 @@
-<p>credit-card-add-component works!</p>
+<div class="container">
+    <form [formGroup]="creditCardForm" (ngSubmit)="onSubmit()">
+        <div>
+
+            <div class="input">
+                <div class="item-wrapper"> 
+                    <label for="card_number">Card number:</label>
+                </div>
+                <div class="item-wrapper"> 
+                    <input type="text" formControlName="card_number">
+                </div>
+                <br/>
+            </div>
+
+            <div class="input">
+                <div class="item-wrapper"> 
+                    <label for="cardholder_name">Name of cardholder:</label>
+                </div>
+                <div class="item-wrapper"> 
+                    <input type="text" formControlName="cardholder_name">
+                </div>
+                <br/>
+            </div>
+
+            <div class="input">
+                <div class="item-wrapper"> 
+                    <label for="csc_code">CSC code:</label>
+                </div>
+                <div class="item-wrapper"> 
+                    <input type="text" formControlName="csc_code">
+                </div>
+                <br/>
+            </div>
+
+            <div class="input">
+                <div class="item-wrapper"> 
+                    <label for="expiration_date_month">Expiration month:</label>
+                </div>
+                <div class="item-wrapper"> 
+                    <input type="text" formControlName="expiration_date_month">
+                </div>
+                <br/>
+            </div>
+
+            <div class="input">
+                <div class="item-wrapper"> 
+                    <label for="expiration_date_year">Expiration year:</label>
+                </div>
+                <div class="item-wrapper"> 
+                    <input type="text" formControlName="expiration_date_year">
+                </div>
+                <br/>
+            </div>
+
+            <div class="input">
+                <div class="item-wrapper"> 
+                    <label for="issuer">Issuer:</label>
+                </div>
+                <div class="item-wrapper"> 
+                    <input type="text" formControlName="issuer">
+                </div>
+                <br/>
+            </div>
+
+        </div>
+        <button type="submit">Submit</button>
+    </form>    
+</div>

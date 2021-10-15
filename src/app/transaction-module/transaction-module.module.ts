@@ -4,6 +4,7 @@ import { TransactionOverviewComponentComponent } from './transaction-overview-co
 import { TransactionListComponentComponent } from './transaction-list-component/transaction-list-component.component';
 import { TransactionListItemComponentComponent } from './transaction-list-item-component/transaction-list-item-component.component';
 import { TransactionAddComponentComponent } from './transaction-add-component/transaction-add-component.component';
+import { TransactionsService } from './transactions.service';
 
 
 
@@ -11,6 +12,9 @@ import { TransactionAddComponentComponent } from './transaction-add-component/tr
   declarations: [TransactionOverviewComponentComponent, TransactionListComponentComponent, TransactionListItemComponentComponent, TransactionAddComponentComponent],
   imports: [
     CommonModule
+  ],
+  providers: [
+    TransactionsService
   ]
 })
 export class TransactionModuleModule { }

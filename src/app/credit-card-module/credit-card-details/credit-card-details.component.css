@@ -27,13 +27,19 @@ button {
     border-radius: 30px;
     font-weight: bold;
 }
-.wrapper:hover{
-    background-color: #ddd;
-    color: black;
+ul{
+  padding: 5px;
+  list-style-position: inside;
+  display:table;
+  table-layout: fixed;
 }
-.info {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    justify-content: center;
+
+ul li {
+  display: table-cell;
+  width: auto;
+  text-align: center;
+  padding: 30px;
+  background-color: #333;
+  border-radius: 30px;
+  color: white;
 }

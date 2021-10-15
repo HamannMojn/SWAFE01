@@ -1,13 +1,25 @@
 <div *ngIf="creditcard">
         <div class="wrapper">
             <div class="info">
-            <h2>{{creditcard.cardholder_name | uppercase }}</h2>
-            <h3> Card number: {{ creditcard.card_number }} </h3>
-            <h3> CSC code: {{creditcard.csc_code}}</h3>
-            <h3> Expiration Month: {{creditcard.expiration_date_month}}</h3>
-            <h3> Expiration Year: {{creditcard.expiration_date_year}}</h3>
-            <h3> Card Issuer: {{creditcard.issuer}} </h3>
+                <h2>{{creditcard.cardholder_name | uppercase }}</h2>
+                <h3> Card number: {{ creditcard.card_number }} </h3>
+                <h3> CSC code: {{creditcard.csc_code}}</h3>
+                <h3> Expiration Month: {{creditcard.expiration_date_month}}</h3>
+                <h3> Expiration Year: {{creditcard.expiration_date_year}}</h3>
+                <h3> Card Issuer: {{creditcard.issuer}} </h3>
+            </div>
         </div>
+        <button (click)="deleteCard(creditcard)"> Delete credit card</button>
+        <h2>Transactions</h2>
+        <div *ngIf="transactions$">
+            <ul *ngFor="let transaction of transactions$">
+                <li>
+                    <div>Date: {{transaction.date | date}}</div>
+                    <div>Amount: {{transaction.amount | number:'1.1-2'}}</div>    
+                    <div>Currency: {{transaction.currency | uppercase}} </div>
+                    <div>Comment: {{transaction.comment}}</div>
+                </li>
+            </ul>
         </div>
     <button (click)="goBack()">go back</button>
 </div>

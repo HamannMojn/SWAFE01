@@ -7,6 +7,7 @@ import { AppModuleModule } from './app-module/app-module.module';
 import { CreditCardModuleModule } from './credit-card-module/credit-card-module.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HttpClientModule } from '@angular/common/http';
+import { TransactionModuleModule } from './transaction-module/transaction-module.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppModuleModule,
     BrowserAnimationsModule,
     CreditCardModuleModule,
+    TransactionModuleModule,
     HttpClientModule
   ],
   providers: [],

@@ -5,6 +5,8 @@ import { CreditCardListComponentComponent } from './credit-card-list-component/c
 import { CreditCardListItemComponentComponent } from './credit-card-list-item-component/credit-card-list-item-component.component';
 import { CreditCardRouterModule } from './credit-card-routing.module';
 import { CreditCardDetailsComponent } from './credit-card-details/credit-card-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TransactionModuleModule } from '../transaction-module/transaction-module.module';
 
 
 
@@ -12,8 +14,14 @@ import { CreditCardDetailsComponent } from './credit-card-details/credit-card-de
   declarations: [CreditCardAddComponentComponent, CreditCardListComponentComponent, CreditCardListItemComponentComponent, CreditCardDetailsComponent],
   imports: [
     CommonModule,
-    CreditCardRouterModule
+    CreditCardRouterModule,
+    FormsModule,
+    TransactionModuleModule,
+    ReactiveFormsModule
   ],
-  exports: [CreditCardAddComponentComponent, CreditCardListComponentComponent, CreditCardListItemComponentComponent]
+  exports: [
+    CreditCardAddComponentComponent,
+    CreditCardListComponentComponent,
+    CreditCardListItemComponentComponent]
 })
 export class CreditCardModuleModule { }

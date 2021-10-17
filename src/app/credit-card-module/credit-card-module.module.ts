@@ -7,11 +7,17 @@ import { CreditCardRouterModule } from './credit-card-routing.module';
 import { CreditCardDetailsComponent } from './credit-card-details/credit-card-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransactionModuleModule } from '../transaction-module/transaction-module.module';
+import { CustomDatePipe } from './custom-date-pipe';
 
 
 
 @NgModule({
-  declarations: [CreditCardAddComponentComponent, CreditCardListComponentComponent, CreditCardListItemComponentComponent, CreditCardDetailsComponent],
+  declarations: 
+  [CreditCardAddComponentComponent,
+  CreditCardListComponentComponent,
+  CreditCardListItemComponentComponent,
+  CreditCardDetailsComponent,
+  CustomDatePipe],
   imports: [
     CommonModule,
     CreditCardRouterModule,

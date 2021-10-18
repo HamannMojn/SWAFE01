@@ -6,5 +6,5 @@ export interface Transaction {
     amount: number,
     currency: string,
     comment: string,
-    date: Date,
+    date: number,
 }

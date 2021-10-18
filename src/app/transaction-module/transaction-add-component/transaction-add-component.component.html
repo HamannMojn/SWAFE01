@@ -1,1 +1,49 @@
-<p>transaction-add-component works!</p>
+<div class="container">
+  <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div>
+        <label>Card number:</label>
+        <br />
+        <select class="dropdown" formControlName="credit_card" >
+          <option *ngFor="let card of creditCards$ | async" [value]="card.card_number">
+            {{card.card_number}}
+          </option>
+        </select>
+      </div>
+      <div class="input">
+        <div class="item-wrapper">
+          <label for="transaction_Amount">Amount:</label>
+        </div>
+        <div class="item-wrapper">
+          <input type="text" formControlName="transaction_Amount">
+        </div>
+      </div>
+      <div class="input">
+        <div class="item-wrapper">
+          <label for="transaction_Currency">Currency:</label>
+        </div>
+        <div class="item-wrapper">
+          <input type="text" formControlName="transaction_Currency">
+        </div>
+      </div>
+      <div class="input">
+        <div class="item-wrapper">
+          <label for="transaction_Comment">Comment:</label>
+        </div>
+        <div class="item-wrapper">
+          <input type="text" formControlName="transaction_Comment">
+        </div>
+      </div>
+      <div class="input">
+        <div class="item-wrapper">
+          <label for="transaction_Date">Date:</label>
+        </div>
+        <div class="item-wrapper">
+          <input type="date" formControlName="transaction_Date">
+        </div>
+      </div>
+      <br />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

@@ -1,1 +1,14 @@
-<p>transaction-overview-component works!</p>
+<div *ngIf="transaction">
+  <div class="wrapper">
+
+    <div class="transactionInfo">
+      <h5> Card Number: {{transaction.credit_card.card_number}}</h5>
+      <h5> Amount: {{transaction.amount | number:'1.1-2'}} {{transaction.currency}}</h5>
+      <h5> Date: {{transaction.date | date}}</h5>
+      <h5> Comment: {{transaction.comment}} </h5>
+      <button (click)="deleteTransaction(transaction)"> Delete transaction</button>
+      <button (click)="goBack()">Go back</button>
+    </div>
+    <br/>
+ </div>
+</div>

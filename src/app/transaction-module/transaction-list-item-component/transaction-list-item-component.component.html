@@ -1,1 +1,8 @@
-<p>transaction-list-item-component works!</p>
+
+<div class="wrapper">
+    <div class="transactionInfo" [routerLink]="['/overview', transaction.uid]">
+        <h5> Card Number: {{transaction.credit_card.card_number}}</h5>
+        <h5> Amount: {{transaction.amount | number:'1.1-2'}} {{transaction.currency}}</h5>
+        <h5> Date: {{transaction.date | date}}</h5>
+    </div>
+</div>

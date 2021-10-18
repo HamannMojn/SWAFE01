@@ -1,1 +1,13 @@
-<p>transaction-list-component works!</p>
+<select class="dropdown" [(ngModel)]="option" (change)="filterTransaction()">
+  <option *ngFor="let card of creditCards" [value]="card.card_number">{{card.card_number}}</option>
+</select>
+<button class="addTransaction" (click)="addTransaction()">Add Transaction</button>
+<div class="container">
+  <h1 class="title">List of transactions</h1>
+  <div *ngIf="filtered">
+    <div *ngFor="let transaction of filtered">
+      <app-transaction-list-item-component [transaction]="transaction">
+      </app-transaction-list-item-component>
+    </div>
+  </div>
+</div>

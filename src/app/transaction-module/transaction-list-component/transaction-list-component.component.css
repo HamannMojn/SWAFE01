@@ -1,0 +1,18 @@
+.title{
+    text-align: center;
+}
+.dropdown{
+    text-align: center;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+}
+
+.addTransaction{
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 25%;
+    background-color:greenyellow;
+}
